@@ -1,5 +1,5 @@
 
-const url = "https://www.saucedemo.com/"
+const url = "https://www.saucedemo.com"
 
 context('Login', () => {
     beforeEach(() => {
@@ -19,7 +19,7 @@ context('Login', () => {
 
           cy.get('#login-button').click();
 
-          cy.get('.product_label').should('have.text', 'Products')
+          cy.get('.title').should('have.text', 'Products')
     })
     it('login with unregistered user', () => {
    

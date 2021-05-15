@@ -35,6 +35,8 @@ context('Visual', () => {
         cy.get('#login-button').click();
 
         //Hover
-        cy.get('#inventory_container > div > div:nth-child(1) > div.pricebar > button').invoke('show');
+        cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').invoke('show')
+        //cy.contains('ADD TO CART')// Assert that el is visible
+       // cy.wrap({ foo: 'bar' }).its('foo').should('eq', 'bar')
     })
 })

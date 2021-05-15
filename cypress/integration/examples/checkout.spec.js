@@ -18,16 +18,16 @@ context('Checkout', () => {
 
           cy.get('#login-button').click();
 
-          cy.get('.product_label').should('have.text', 'Products')
+          cy.get('.title').should('have.text', 'Products')
 
           //Add item
-          cy.contains('ADD TO CART').click()
+          cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
 
           //View Cart
           cy.get('.shopping_cart_container span').click();
 
-          //Checkout
-          cy.contains('CHECKOUT').click()
+          //Checkout"
+          cy.get('[data-test="checkout"]').click()
 
           cy.get('[data-test="firstName"]')
           .type('faris')
@@ -41,10 +41,10 @@ context('Checkout', () => {
           .type('12345')
           .should('have.value', '12345');
 
-          cy.contains('CONTINUE').click()
+          cy.get('[data-test="continue"]').click()
           cy.wait(500)
 
-          cy.contains('FINISH').click()
+          cy.get('[data-test="finish"]').click()
            
           //Verify text success checkout
           cy.get('.complete-header').should('have.text', 'THANK YOU FOR YOUR ORDER')
@@ -64,16 +64,16 @@ context('Checkout', () => {
           cy.get('#login-button').click();
 
           //Add item
-          cy.contains('ADD TO CART').click()
+          cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
 
           //View Cart
           cy.get('.shopping_cart_container span').click();
 
           //Remove Item
-          cy.contains('REMOVE').click()
+          cy.get('[data-test="remove-sauce-labs-backpack"]').click()
 
           //Checkout
-          cy.contains('CHECKOUT').click()
+          cy.get('[data-test="checkout"]').click()
 
           
     })
