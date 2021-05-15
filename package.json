@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "open": "cypress open",
-    "test":"npx cypress runs",
-    "test-headless":"npx cypress run --spec 'cypress/integration/examples' --headless"
+    "test": "npx cypress run",
+    "test-headless": "npx cypress run --spec 'cypress/integration/examples' --headless"
   },
   "author": "",
   "license": "ISC",
